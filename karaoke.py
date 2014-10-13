@@ -26,7 +26,8 @@ for elemento in taglist:
                 if atributo == "src":
                         os.system("wget -q " + elemento[1][atributo])
                         direcciontroz = elemento[1][atributo].split("/")
-                        elemento[1][atributo] = direcciontroz[-1] 
+                        elemento[1][atributo] = direcciontroz[-1]
                 if elemento[1][atributo] != "":
-                        linea = linea + ('\t') + atributo + ("=") + (elemento[1][atributo])
+                        linea = linea + ('\t')
+                        linea += atributo + ("=") + (elemento[1][atributo])
         print linea
